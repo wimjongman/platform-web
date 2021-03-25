@@ -20,6 +20,16 @@ hugo server
 git submodule update --remote
 ```
 
+## How to build my project's website with Jenkins?
+
+The preferred static website generator for build Eclipse project websites is [Hugo](https://gohugo.io/). You should first put your Hugo sources in a dedicated Git repository, either at GitHub if your source code is already hosted at GitHub or at git.eclipse.org. If you don't have such a repository already, feel free to [open a request](https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&component=Git), the Eclipse IT team will create one for you.
+
+Note that each and every Eclipse project automatically gets a Git repository with `git.eclipse.org/www.eclipse.org/<project_name>` (see this repository index for complete list). This is not where you want to push your Hugo sources. This repository contains the webpages that are automatically and regularly pulled and published on the www.eclipse.org HTTP server. All the content from the master branch will eventually be available at the URL https://www.eclipse.org/<project_name/>.
+
+Once your Hugo sources are in the proper repository, update the file named `Jenkinsfile` at the root of the repository with the proper value for `PROJECT_NAME` and `PROJECT_BOT_NAME` environment variable.
+
+If you don't have a Jenkins instance already, [ask for one](https://wiki.eclipse.org/CBI#Requesting_a_JIPP_instance). If you need assistance with the process, [open a ticket](https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&component=CI-Jenkins).
+
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the [eclipsefdn/hugo-eclipsefdn-website-starterkit](https://github.com/eclipsefdn/hugo-eclipsefdn-website-starterkit) repository
