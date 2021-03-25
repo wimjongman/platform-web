@@ -9,13 +9,20 @@ The Eclipse Foundation provides our global community of individuals and organiza
 Install dependencies, build assets and start a web server:
 
 ```bash
+git clone --recurse-submodules https://github.com/EclipseFdn/hugo-eclipsefdn-website-starterkit.git
 hugo server
+```
+
+### Update hugo-solstice-theme
+
+```bash
+git submodule update --remote
 ```
 
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the [eclipsefdn/hugo-eclipsefdn-website-starterkit](https://github.com/eclipsefdn/hugo-eclipsefdn-website-starterkit) repository
-2. Clone repository: `git clone https://github.com/[your_github_username]/hugo-eclipsefdn-website-starterkit.git`
+2. Clone repository: `git clone --recurse-submodules https://github.com/[your_github_username]/hugo-eclipsefdn-website-starterkit.git`
 3. Create your feature branch: `git checkout -b my-new-feature`
 4. Commit your changes: `git commit -m 'Add some feature' -s`
 5. Push feature branch: `git push origin my-new-feature`
