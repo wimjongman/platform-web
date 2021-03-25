@@ -10,6 +10,7 @@ Install dependencies, build assets and start a web server:
 
 ```bash
 git clone --recurse-submodules https://github.com/EclipseFdn/hugo-eclipsefdn-website-starterkit.git
+cd hugo-eclipsefdn-website-starterkit
 hugo server
 ```
 
