@@ -9,8 +9,8 @@ This boilerplate was created to help Eclipse Projects migrate their website to H
 Clone the project with submodules and start a web server:
 
 ```bash
-git clone --recurse-submodules https://github.com/eclipse/dash-website.git
-cd dash-website
+git clone --recurse-submodules https://github.com/EclipseFdn/hugo-eclipsefdn-website-boilerplate
+cd hugo-eclipsefdn-website-boilerplate
 hugo server
 ```
 
