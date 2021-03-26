@@ -1,12 +1,12 @@
 # hugo-eclipsefdn-website-boilerplate
 
-The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation.
+This boilerplate was created to help Eclipse Projects migrate their website to Hugo!
 
 [![Build Status](https://travis-ci.org/EclipseFdn/hugo-eclipsefdn-website-boilerplate.svg?branch=main)](https://travis-ci.org/eclipsefdn/hugo-eclipsefdn-website-boilerplate)
 
 ## Getting started
 
-Install dependencies, build assets and start a web server:
+Clone the project with submodules and start a web server:
 
 ```bash
 git clone --recurse-submodules https://github.com/eclipse/dash-website.git
