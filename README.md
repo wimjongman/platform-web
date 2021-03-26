@@ -9,26 +9,36 @@ The Eclipse Foundation provides our global community of individuals and organiza
 Install dependencies, build assets and start a web server:
 
 ```bash
-git clone --recurse-submodules https://github.com/EclipseFdn/hugo-eclipsefdn-website-boilerplate.git
-cd hugo-eclipsefdn-website-boilerplate
+git clone --recurse-submodules https://github.com/eclipse/dash-website.git
+cd dash-website
 hugo server
 ```
 
 ### Update hugo-solstice-theme
 
+The [hugo-solstice-theme](https://github.com/EclipseFdn/hugo-solstice-theme) was added to this project as a git submodule.
+
 ```bash
 git submodule update --remote
 ```
 
+For more information, please see git documentation on [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
 ## How to build my project's website with Jenkins?
 
-The preferred static website generator for build Eclipse project websites is [Hugo](https://gohugo.io/). You should first put your Hugo sources in a dedicated Git repository, either at GitHub if your source code is already hosted at GitHub or at git.eclipse.org. If you don't have such a repository already, feel free to [open a request](https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&component=Git), the Eclipse IT team will create one for you.
+The preferred static website generator for Eclipse project websites is [Hugo](https://gohugo.io/). 
 
-Note that each and every Eclipse project automatically gets a Git repository with `git.eclipse.org/www.eclipse.org/<project_name>` (see this repository index for complete list). This is not where you want to push your Hugo sources. This repository contains the webpages that are automatically and regularly pulled and published on the www.eclipse.org HTTP server. All the content from the master branch will eventually be available at the URL https://www.eclipse.org/<project_name/>.
+You should first put your Hugo sources in a dedicated Git repository, either at GitHub if your source code is already hosted at GitHub or at git.eclipse.org. If you don't have such a repository already, feel free to [open a request](https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&component=Git), the Eclipse IT team will create one for you.
 
-Once your Hugo sources are in the proper repository, update the file named `Jenkinsfile` at the root of the repository with the proper value for `PROJECT_NAME` and `PROJECT_BOT_NAME` environment variable.
+Note that each and every Eclipse project automatically gets a Git repository with `git.eclipse.org/www.eclipse.org/<project_name>` (see this [repository index](https://git.eclipse.org/r/plugins/gitiles/www.eclipse.org/) for complete list). This is not where you want to push your Hugo sources. This repository contains the webpages that are automatically and regularly pulled and published on the www.eclipse.org HTTP server. All the content from the master branch will eventually be available at the URL https://www.eclipse.org/<project_name>.
+
+We recommend that our projects start with forking our [hugo-eclipsefdn-website-boilerplate](https://github.com/EclipseFdn/hugo-eclipsefdn-website-boilerplate) project.
+
+Once your Hugo sources are in the proper repository, update the file named `Jenkinsfile` at the root of the repository with the proper value for `PROJECT_NAME` and `PROJECT_BOT_NAME` environment variable. We also expect projects to update the README.md, config.toml and all the files in the content folder.
 
 If you don't have a Jenkins instance already, [ask for one](https://wiki.eclipse.org/CBI#Requesting_a_JIPP_instance). If you need assistance with the process, [open a ticket](https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&component=CI-Jenkins).
+
+The `Jenkinsfile` example assumes that your project will use `main` as the default branch for your source code. Projects will need to make changes to the file to use a different branch name.
 
 ## Contributing
 
