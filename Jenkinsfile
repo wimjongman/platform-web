@@ -54,7 +54,7 @@ spec:
                     if [ "${BRANCH_NAME}" = "main" ]; then
                       git checkout master
                     else
-                      git checkout -b ${BRANCH_NAME}
+                      git checkout -B ${BRANCH_NAME}
                     fi
                 '''
             }
