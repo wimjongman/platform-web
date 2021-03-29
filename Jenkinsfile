@@ -32,7 +32,7 @@ spec:
   }
  
   environment {
-    PROJECT_NAME = "platform" // must be all lowercase.
+    PROJECT_NAME = "eclipse" // must be all lowercase.
     PROJECT_BOT_NAME = "PLATFORM Bot" // Capitalize the name
   }
  
