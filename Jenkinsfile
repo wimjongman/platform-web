@@ -37,7 +37,6 @@ spec:
   }
  
   triggers { pollSCM('H/3 * * * *') 
- 
  }
  
   options {
