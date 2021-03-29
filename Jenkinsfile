@@ -101,7 +101,7 @@ spec:
                 git add -A
                 if ! git diff --cached --exit-code; then
                   echo "Changes have been detected, publishing to repo 'www.eclipse.org/${PROJECT_NAME}'"
-                  git config user.email "${PROJECT_NAME}-bot@eclipse.org"
+                  git config user.email "platform-bot@eclipse.org"
                   git config user.name "${PROJECT_BOT_NAME}"
                   git commit -m "Website build ${JOB_NAME}-${BUILD_NUMBER}"
                   git log --graph --abbrev-commit --date=relative -n 5
