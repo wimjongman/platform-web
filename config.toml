@@ -70,28 +70,62 @@ pluralizeListTitles = false
     weight = 3
     
 [[menu.sidebar]]
-  name = "Documentation"
-  url = "/home"
+  name = "About this Project"
+  url = "https://www.eclipse.org/projects/project_summary.php?projectid=eclipse"
   weight = 1
   identifier = "home"
-  
+
 [[menu.sidebar]]
   parent ="home"
-  name = "hugo-solstice-theme"
-  url = "https://eclipsefdn-hugo-solstice-theme.netlify.app/"
-  weight = 1
-  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
-  
-[[menu.sidebar]]
-  parent ="home"
-  name = "Solstice"
-  url = "https://www.eclipse.org/eclipse.org-common/themes/solstice/docs/"
-  weight = 2
+  name = "Downloads"
+  url = "https://download.eclipse.org/eclipse/"
+  weight = 10
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
 
 [[menu.sidebar]]
   parent ="home"
-  name = "Hugo"
-  url = "https://gohugo.io/documentation/"
-  weight = 3
+  name = "FAQ"
+  url = "https://wiki.eclipse.org/index.php/Eclipse_FAQs"
+  weight = 20
   pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+
+[[menu.sidebar]]
+  parent ="home"
+  name = "Documentation"
+  url = "https://help.eclipse.org/"
+  weight = 25
+  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+
+[[menu.sidebar]]
+  parent = "home"
+  name = "Subprojects"
+  weight = 30
+	  
+[[menu.sidebar]]
+  parent ="home"
+  name = "Platform"
+  url = "https://wiki.eclipse.org/Platform"
+  weight = 40
+  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+  
+[[menu.sidebar]]
+  parent ="home"
+  name = "JDT"
+  url = "https://www.eclipse.org/jdt/"
+  weight = 50
+  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+
+[[menu.sidebar]]
+  parent ="home"
+  name = "PDE"
+  url = "https://www.eclipse.org/pde/"
+  weight = 60
+  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+
+[[menu.sidebar]]
+  parent ="home"
+  name = "e4"
+  url = "https://www.eclipse.org/e4/"
+  weight = 70
+  pre = "<i class=\"fa fa-caret-right fa-fw\"></i>"
+
