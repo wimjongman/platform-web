@@ -94,7 +94,6 @@ spec:
         }
       }
       steps {
-        sh 'git submodule update --init --recursive'
         sh 'rm -rf www/* && cp -Rvf hugo/public/* www/'
         dir('www') {
             sshagent(['git.eclipse.org-bot-ssh']) {
